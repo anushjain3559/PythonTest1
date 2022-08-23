@@ -6,7 +6,12 @@ jobs:
       - image: cimg/python:3.10.6
     steps:
       - checkout
-      - run: python --version
+      - run: 
+          name: Checking Python version
+          command: python --version
+      - run:
+          name: Installing Flask
+          command: pip install flask
 
 workflows:
   python-workflow:
